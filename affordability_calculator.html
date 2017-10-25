@@ -6,6 +6,7 @@
 	
 	<link rel='stylesheet' href='css/ionicons.css'> <!-- Font Icons -->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/ranger.css"/>
 	<link rel="stylesheet" href="css/main.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
@@ -20,7 +21,7 @@
 				<div class="container">
 					<div class="row">
 						<span class="col-20"><a href="javascript:void(0)" class="float_left"><i class="ion-ios-arrow-left"></i></a></span>
-						<span class="text_center col-60"><h4>EDIT PROFILE</h4></span>
+						<span class="text_center col-60"><h4>HOME AFFORDABILITY CALCULATOR</h4></span>
 						<span class="col-20"><a href="javascript:void(0)" class="float_right"><i class="ion-navicon"></i></a></span>
 					</div>
 				</div>
@@ -67,9 +68,23 @@
 								<p>Based on your income, a house at this price should fit comfortably within your budget.</p>
 							</article>
 							<div class="range_slider">
-								<div class="rangeslider-wrap">
-								  <input type="range" min="150" max="210" step="0.1" labels="150, 160, 170, 180, 190, 200, 210">
-								</div>
+								<i class="ion-pricetag pricetag"></i>
+								<i class="ion-android-home home"></i>
+								<!-- Slider Markup -->
+				        <div class="Slider js-ranger">
+				        	<span class="min_price">$ 4,145</span>
+				        	<span class="max_price">$ 4,565,145</span>
+			            <input data-min="0"  data-max="100" value="25" type="hidden" name="amount" autocomplete="off" class="js-ranger-input" />
+			            <div class="Slider-track js-ranger-track">
+		                <div class="Slider-distance js-ranger-distance">
+	                    <div class="Slider-handle"></div>
+		                </div>
+			            </div>
+			            <output class="Slider-indicator js-ranger-indicator">
+			                <small class="Slider-value js-ranger-value"></small>
+			            </output>
+				        </div>
+				        <!-- Slider Markup -->
 							</div>
 						</div>
 					</div>
@@ -92,53 +107,7 @@
 	</main>
 	<!-- //End Login -->
 
-
- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script type="text/javascript">
-		$('input[type="range"]').rangeslider({
-	  // Feature detection the default is `true`.
-	    // Set this to `false` if you want to use
-	    // the polyfill also in Browsers which support
-	    // the native <input type="range"> element.
-	    polyfill: false,
-
-	    // Default CSS classes
-	    rangeClass: 'rangeslider',
-	    disabledClass: 'rangeslider--disabled',
-	    horizontalClass: 'rangeslider--horizontal',
-	    fillClass: 'rangeslider__fill',
-	    handleClass: 'rangeslider__handle',
-
-	    // Callback function
-	    onInit: function() {
-	      $rangeEl = this.$range;
-	      // add value label to handle
-	      var $handle = $rangeEl.find('.rangeslider__handle');
-	      var handleValue = '<div class="rangeslider__handle__value">' + this.value + '</div>';
-	      $handle.append(handleValue);
-	      
-	      // get range index labels 
-	      var rangeLabels = this.$element.attr('labels');
-	      rangeLabels = rangeLabels.split(', ');
-	      
-	      // add labels
-	      $rangeEl.append('<div class="rangeslider__labels"></div>');
-	      $(rangeLabels).each(function(index, value) {
-	        $rangeEl.find('.rangeslider__labels').append('<span class="rangeslider__labels__label">' + value + '</span>');
-	      })
-	    },
-
-	    // Callback function
-	    onSlide: function(position, value) {
-	      var $handle = this.$range.find('.rangeslider__handle__value');
-	      $handle.text(this.value);
-	    },
-
-	    // Callback function
-	    onSlideEnd: function(position, value) {}
-	});
-
-	</script>
+	<script src="js/ranger.js" async></script>
 
 </body>
 </html>

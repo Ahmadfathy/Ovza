@@ -6,6 +6,7 @@
 	
 	<link rel='stylesheet' href='css/ionicons.css'> <!-- Font Icons -->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/ranger.css"/>
 	<link rel="stylesheet" href="css/main.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
@@ -13,10 +14,99 @@
 </head>
 <body>
 
+	<!-- Start Login -->
+	<main>
+		<div class="wrapper">
+			<header class="header text_center margin_bottom_10">
+				<div class="container">
+					<div class="row">
+						<span class="col-20"><a href="javascript:void(0)" class="float_left"><i class="ion-ios-arrow-left"></i></a></span>
+						<span class="text_center col-60"><h4>MORTGAGE CALCULATOR</h4></span>
+						<span class="col-20"><a href="javascript:void(0)" class="float_right"><i class="ion-navicon"></i></a></span>
+					</div>
+				</div>
+			</header>
+			<div class="container">
+				<section class="padding_top_10 padding_bottom_60">
+					<article class="text_center">
+						<p>
+							Use this calculator to determine the maximum price of a house in your budget. Simply enter the details of your monthly repayment budget, down payment amount, and loan tenure and we will provide you with the maximum amount you can afford to pay for a house.
+						</p>
+					</article>
+					<div class="calc text_center margin_top_bottom_20">					
+						<form role="form" action="#" method="#">
+							<fieldset>
+								<input class="input" type="text" name="" placeholder="MORTGAGE AMOUNT ($)" >
+							</fieldset>
+							<fieldset>
+								<input class="input" type="text" name="" placeholder="DOWNPAYMENT ($)" >
+							</fieldset>
+							<fieldset>
+								<input class="input" type="text" name="" placeholder="INTEREST RATE (%)" >
+							</fieldset>
+							<fieldset>
+								<select class="input select_box">
+									<option selected="selected" value="0">AGE OF PROPERTY</option>
+									<option value="1">Arabic</option>
+									<option value="2">English</option>
+									<option value="3">Frinsh</option>
+									<option value="4">Spanish</option>
+									<option value="5">Persia</option>
+								</select>
+							</fieldset>
+							<div class="actions">
+								<button class="btn btn_block btn_login">
+									CALCULATE
+								</button>
+							</div>
+						</form>
+						<div class="monthly_pay text_center">
+							<i class="ion-home"></i>
+							<article>
+								<h4>Your Monthly Payment</h4>
+								<h5>$ 4,127,505</h5>
+								<p>Based on your income, a house at this price should fit comfortably within your budget.</p>
+							</article>
+							<div class="range_slider">
+								<i class="ion-pricetag pricetag"></i>
+								<i class="ion-android-home home"></i>
+								<!-- Slider Markup -->
+				        <div class="Slider js-ranger">
+				        	<span class="max_price">$ 4,565,145</span>
+			            <input data-min="25"  data-max="75" value="25" type="hidden" name="amount" autocomplete="off" class="js-ranger-input" />
+			            <div class="Slider-track js-ranger-track">
+		                <div class="Slider-distance js-ranger-distance">
+	                    <div class="Slider-handle"></div>
+		                </div>
+			            </div>
+			            <output class="Slider-indicator js-ranger-indicator">
+			                <small class="Slider-value js-ranger-value"></small>
+			            </output>
+				        </div>
+				        <!-- Slider Markup -->
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<nav class="nav_tabs">
+				<ul class="left_side">
+					<li><a href="javascript:void(0)"><i class="ion-home"></i></a></li>
+					<li><a href="javascript:void(0)"><i class="ion-ios-plus-outline"></i></a></li>
+				</ul>
+				<ul class="center_side">
+					<li><a href="javascript:void(0)"><i class="ion-chevron-right"></i></a></li>
+				</ul>
+				<ul class="right_side">
+					<li><a href="javascript:void(0)"><i class="ion-chatbubble-working"></i></a></li>
+					<li><a href="javascript:void(0)"><i class="ion-ios-person-outline"></i></a></li>
+				</ul>
+			</nav>
+		</div>
+	</main>
+	<!-- //End Login -->
 
-	<h1>Ahmad Fathy</h1>
-
-	<i class="ion-help-buoy"></i>
+	<script src="js/ranger.js" async></script>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-==============================
+/*==============================
   Start Global
 ==============================*/
 @font-face {
@@ -227,6 +227,7 @@ img {
 section {
   position: relative;
 }
+
 .height_100 {
   height: 100px !important;
 }
@@ -399,6 +400,7 @@ form .input.has_icon {
   border-radius: 15px;
   line-height: 30px;
   color: #FFF;
+  min-width: 100px;
 }
 .btn_block {
   display: block;
@@ -415,6 +417,12 @@ form .input.has_icon {
 }
 .actions {
   margin: 20px auto;
+}
+.alert_msg {
+  color: #5aba53;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 1px;
 }
 .tabs {
   margin: 20px;
@@ -507,6 +515,12 @@ header.header a {
 header.header a i {
   font-size: 25px;
 }
+header.header .paypal {
+  padding: 5px;
+  font-size: 10px;
+  color: #FFF;
+  background-color: #5aba53
+}
 /*-- Start Nav tabs Footer --*/
 nav.nav_tabs {
   position: fixed;
@@ -517,6 +531,7 @@ nav.nav_tabs {
   margin: auto;
   box-shadow: 0 0 5px rgba(90,90,90,0.35);
   background-color: #FFF;
+  z-index: 99999;
 }
 nav.nav_tabs ul {
 
@@ -553,6 +568,9 @@ nav.nav_tabs ul.center_side li a {
   box-shadow: 0 0 5px rgba(90,90,90,0.35);
   border-radius: 50%;
 }
+nav.nav_tabs ul.center_side li a img {
+  padding: 10px;
+}
 nav.nav_tabs ul.right_side {
   float: right;
   width: 40%;
@@ -573,6 +591,38 @@ nav.nav_tabs ul li a {
   font-size: 24px;
 }
 /*-- //End Nav tabs Footer --*/
+
+/*-- Start PopUp Overlay --*/
+.overlay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 9999;
+}
+.wrapper_overlay {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.center_box {
+  margin: auto;
+}
+.sm_box {
+  width: 300px;
+  height: auto;
+  background-color: #FFF;
+  box-shadow: 0 0 10px #d9d9d9;
+  padding: 20px;
+}
+.main_color {
+  color: #5aba53;
+}
+/*-- //End PopUp Overlay --*/
 @media (max-width: 480px) {
   p {
     font-size: 13px;
@@ -993,9 +1043,274 @@ nav.nav_tabs ul li a {
 /*==============================
   Start
 ==============================*/
+.list_detail_pop h5 {
+  color: #747474;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+.list_detail_pop h3 {
+  margin: 10px auto;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  text-align: center;
+  color: #5aba53;
+  border-radius: 50%;
+  border: 2px solid #5aba53;
+  font-size: 26px;
+  font-weight: 700;
+}
+.list_detail_pop p {
+  font-size: 12px;
+  color: #5aba53;
+  margin-bottom: 10px;
+}
+.list_detail_pop button {
+  
+}
 /*==============================
   End 
 ==============================*/
+
+
+
+/*==============================
+  Start Checks
+==============================*/
+@keyframes click-wave {
+  0% {
+    height: 15px;
+    width: 15px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 25px;
+    width: 25px;
+    margin-left: -6px;
+    margin-top: -6px;
+    opacity: 0;
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  transition: all 0.15s ease-out 0s;
+  background-color: #DFDFDF;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background-color: #ccc;
+}
+.option-input:checked {
+  background-color: #5aba53;
+}
+.option-input:checked::before {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 11px;
+  text-align: center;
+  line-height: 15px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #5aba53;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+.check label {
+  display: block;
+  line-height: 40px;
+}
+.check_rooms {
+
+}
+.check_rooms .title{
+  margin-bottom: 25px;
+}
+.check_rooms .title h5 {
+  color: #333;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  
+}
+.check_rooms .title h6 {
+  font-size: 12px;
+  color: #333;
+}
+/*==============================
+  End Checks
+==============================*/
+
+
+
+/*==============================
+  Start Centered
+==============================*/
+.centered {
+  position: relative;
+  height: 100vh;
+}
+.centered .context {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+}
+.centered .context h4.input_title {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+.centered .context p {
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+.centered .context h4.price {
+  color: #5aba53;
+  line-height: 1.5;
+}
+/*==============================
+  End Centered
+==============================*/
+
+
+
+/*==============================
+  Start terms
+==============================*/
+.terms {
+
+}
+.terms p {
+  margin-bottom: 20px;
+}
+.terms .check label {
+  font-size: 12px;
+}
+/*==============================
+  End terms
+==============================*/
+
+
+
+
+/*==============================
+  Start
+==============================*/
+.no_result {
+  margin: 40px auto;
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  background-color: #efefef;
+  color: #333;
+  border: 1px solid #5aba53;
+  position: relative;
+}
+.no_result i {
+  margin: 25% auto 20px;
+  display: block;
+  color: #FFF;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #5aba53;
+}
+.no_result h4 {
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+/*==============================
+  End 
+==============================*/
+
+
+
+
+/*==============================
+  Start range_slider
+==============================*/
+.range_slider {
+  position: relative;
+  padding-top: 20px;
+}
+.range_slider i {
+  font-size: 26px !important;
+  position: absolute !important;
+  top: 5px !important;
+  color: #CCC !important;
+  background-color: transparent !important;
+}
+.range_slider i.pricetag {
+  left: 5px;
+  right: auto !important;
+}
+.range_slider i.home {
+  right: 5px;
+  left: auto !important;
+}
+.js-ranger .max_price {
+  position: absolute;
+  right: 0;
+  top: 23px;
+  padding: 2px 7px;
+  background-color: #e1e1e1;
+  font-size: 10px;
+  height: 25px;
+  line-height: 25px;
+}
+.js-ranger .min_price {
+  position: absolute;
+  left: 0;
+  top: 23px;
+  padding: 2px 7px;
+  background-color: #e1e1e1;
+  font-size: 10px;
+  height: 25px;
+  line-height: 25px;
+}
+
+/*==============================
+  End range_slider
+==============================*/
+
 
 
 
@@ -1007,13 +1322,6 @@ nav.nav_tabs ul li a {
 ==============================*/
 
 
-/*==============================
-  Start
-==============================*/
-/*==============================
-  End 
-==============================*/
-
 
 
 /*==============================
@@ -1021,4 +1329,4 @@ nav.nav_tabs ul li a {
 ==============================*/
 /*==============================
   End 
-==============================
+==============================*/
