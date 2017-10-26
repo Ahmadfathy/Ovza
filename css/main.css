@@ -19,7 +19,7 @@ html {
 
 body{
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /*-moz-osx-font-smoothing: grayscale;*/
     -webkit-font-family: 'Raleway', sans-serif;
     -moz-font-family: 'Raleway', sans-serif;
     -ms-font-family: 'Raleway', sans-serif;
@@ -85,7 +85,17 @@ main {
   -ms-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
-
+}
+.wrapper .ovrly {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  content: '';
+  background-color: rgba(143,143,143,0.2);
 }
 .container {
   width: 96%;
@@ -110,6 +120,9 @@ p {
 }
 img {
   max-width: 100% !important;
+}
+.width_150 {
+  width: 100px !important;
 }
 .padding_top_15per {
   padding-top: 15%;
@@ -165,6 +178,12 @@ img {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+.margin_bottom_60 {
+  margin-bottom: 60px;
+}
+.margin_bottom_50 {
+  margin-bottom: 50px;
+}
 .margin_bottom_40 {
   margin-bottom: 40px;
 }
@@ -204,6 +223,10 @@ img {
 .margin_left_15 {
   margin-left: 15px;
 }
+.margin_auto {
+  margin-right: auto;
+  margin-left: auto;
+}
 .text_center {
   text-align: center !important;
 }
@@ -223,6 +246,10 @@ img {
 }
 .width50 {
   width: 50px;
+}
+.max_width_400 {
+  max-width: 400px;
+  width: 100%;
 }
 section {
   position: relative;
@@ -431,9 +458,17 @@ form .input.has_icon {
   border-radius: 17px;
   border: 1px solid #5aba53;
 }
+.tabs li.col_3 {
+  width: 33.3333%
+}
+.tabs li.col_3:nth-child(2) {
+  border-left: 1px solid #5aba53;
+  border-right: 1px solid #5aba53;
+}
 .tabs li {
   float: left;
   width: 50%;
+  background-color: #FFF;
 }
 .tabs li a {
   display: block;
@@ -602,7 +637,7 @@ nav.nav_tabs ul li a {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.6);
-  z-index: 9999;
+  z-index: 99999;
 }
 .wrapper_overlay {
   width: 100%;
@@ -614,6 +649,13 @@ nav.nav_tabs ul li a {
 }
 .sm_box {
   width: 300px;
+  height: auto;
+  background-color: #FFF;
+  box-shadow: 0 0 10px #d9d9d9;
+  padding: 20px;
+}
+.xs_box {
+  width: 220px;
   height: auto;
   background-color: #FFF;
   box-shadow: 0 0 10px #d9d9d9;
@@ -1066,8 +1108,12 @@ nav.nav_tabs ul li a {
   color: #5aba53;
   margin-bottom: 10px;
 }
-.list_detail_pop button {
-  
+.list_detail_pop button.width_150 {
+  margin: 0 auto 20px;
+}
+.list_detail_pop a {
+  text-decoration: underline;
+  color: #5aba53;
 }
 /*==============================
   End 
@@ -1306,12 +1352,258 @@ nav.nav_tabs ul li a {
   height: 25px;
   line-height: 25px;
 }
-
 /*==============================
   End range_slider
 ==============================*/
 
 
+
+
+/*==============================
+  Start property Listing
+==============================*/
+.property_box {
+  padding: 25px;
+  background-color: #f6f6f6;
+  border: 1px solid #5aba53;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+.property_box img {
+  margin-bottom: 30px;
+}
+.property_box h5 {
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+/*==============================
+  End property Listing
+==============================*/
+
+
+
+
+/*==============================
+  Start
+==============================*/
+.mang_list {
+
+}
+.mang_list ul {
+  
+}
+.mang_list li {
+  margin-bottom: 15px;
+  color: #5aba53;
+  font-size: 14px;
+}
+.mang_list li i {
+  margin-right: 10px;
+  font-size: 12px;
+}
+/*==============================
+  End 
+==============================*/
+
+
+/*==============================
+  Start add_listing
+==============================*/
+.add_listing {
+
+}
+.add_listing h5 {
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: #333;
+}
+.add_listing .actions button {
+  width: 150px;
+  margin: 0 5px;
+}
+.add_listing article p {
+  line-height: 1.5;
+}
+.add_listing .gallery ul {
+  overflow: hidden;
+}
+.add_listing .gallery li {
+  display: block;
+  width: 50%;
+  float: left;
+  padding: 0 7px;
+  margin-bottom: 10px; 
+}
+.add_listing .gallery li img {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .add_listing .actions button {
+    width: 100px;
+    margin: 0 3px;
+    font-size: 10px;
+  }
+  .add_listing h5 {
+    letter-spacing: 0px;
+    font-size: 13px;
+  }
+}
+/*==============================
+  End add_listing
+==============================*/
+
+
+
+
+/*==============================
+  Start Map
+==============================*/
+.map {
+
+}
+.map iframe{
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+/*==============================
+  End Map
+==============================*/
+
+
+
+/*==============================
+  Start Chat
+==============================*/
+.chat_2 {
+      padding-bottom: 70px;
+}
+.chat_row {
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 10px 3%;
+  margin-bottom: 20px;
+}
+.chat_row .chat_img {
+  width: 70px;
+  float: left;
+  position: relative;
+}
+.chat_row .chat_img img {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.chat_row .chat_active {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  content: '';
+  background-color: #080;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.chat_row .chat_context {
+  width: calc(100% - 70px);
+  float: left;
+  padding-left: 20px;
+}
+.chat_row .chat_context .info {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 10px 0 15px;
+}
+.chat_row .chat_context .info h5 {
+  
+}
+.chat_row .chat_context .info span.counter {
+  position: absolute;
+  top: 0;
+  right: 30%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #b1b1b1;
+  text-align: center;
+  line-height: 12px;
+  color: #FFF;
+  font-size: 10px;
+}
+.chat_row .chat_context .info time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  color: #b1b1b1;
+}
+.chat_row .chat_context .prgrph {
+  
+}
+.chat_row .chat_context .prgrph p {
+  
+}
+/*==============================
+  End Chat
+==============================*/
+
+
+/*==============================
+  Start
+==============================*/
+/*==============================
+  End 
+==============================*/
+
+
+
+
+/*==============================
+  Start
+==============================*/
+/*==============================
+  End 
+==============================*/
+
+
+
+
+/*==============================
+  Start
+==============================*/
+/*==============================
+  End 
+==============================*/
+
+
+/*==============================
+  Start
+==============================*/
+/*==============================
+  End 
+==============================*/
+
+
+
+
+/*==============================
+  Start
+==============================*/
+/*==============================
+  End 
+==============================*/
+
+
+
+/*==============================
+  Start
+==============================*/
+/*==============================
+  End 
+==============================*/
 
 
 /*==============================
