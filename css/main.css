@@ -660,6 +660,10 @@ nav.nav_tabs ul li a {
   color: #5aba53;
   font-size: 24px;
 }
+nav.nav_tabs ul li a img {
+  width: 25px;
+  height: 25px;
+}
 /*-- //End Nav tabs Footer --*/
 
 /*-- Start PopUp Overlay --*/
@@ -1275,7 +1279,7 @@ nav.nav_tabs ul li a {
 ==============================*/
 .centered {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
 .centered .context {
   position: absolute;
