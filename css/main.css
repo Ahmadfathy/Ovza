@@ -1894,7 +1894,7 @@ nav.nav_tabs ul li a img {
   margin-bottom: 15px;
 }
 .dashboard h5 {
-  color: #666;
+  color: #444;
   line-height: 1.5;
 }
 .statistics {
@@ -2432,6 +2432,12 @@ nav.nav_tabs ul li a img {
 /*==============================
   Start
 ==============================*/
+.agent_licinse {
+
+}
+.agent_licinse {
+  margin-top: 25%; 
+}
 /*==============================
   End 
 ==============================*/
