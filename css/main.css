@@ -2250,7 +2250,65 @@ nav.nav_tabs ul li a img {
 .ac.active > .ac-q::after {
   content: "\2013";
 }
+.prop_info {
 
+}
+.prop_info ul {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.prop_info li {
+  width: 50%;
+  float: left;
+  padding: 5px 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.prop_info li p {
+  padding: 0 !important;
+  width: 55%;
+  float: left;
+  font-size: 16px;
+  position: relative;
+}
+.prop_info li p:after {
+  content: ':';
+  position: absolute;
+  top: 0;
+  right: 8px;
+  font-size: 16px;
+  color: #7e7e7e;
+
+}
+.prop_info li p img {
+  width: 16px;
+  height: auto;
+  margin-right: 5px;
+}
+.prop_info li p span {
+  color: #7e7e7e;
+  font-size: 16px;
+}
+.prop_info li h6 {
+  width: 45%;
+  float: left;
+  color: #7e7e7e;
+  font-size: 16px;
+}
+.prop_info {
+  
+}
+@media (max-width: 480px){
+  .prop_info li {
+    width: 100%;
+  }
+  .prop_info li p:after {
+    right: 3px;
+  }
+  .prop_info li p, .prop_info li p:after, .prop_info li p span, .prop_info li h6 {
+    font-size: 13px;
+  }
+}
 /*==============================
   End 
 ==============================*/
